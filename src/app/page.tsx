@@ -1,20 +1,19 @@
 import Image from "next/image";
-import { prisma } from "../../lib/prisma";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiPostgresql, SiPrisma, SiShadcnui } from "react-icons/si";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
+import Link from "next/link";
+
 export default async function Home() {
-  const user = await prisma.user.findFirst({
-    where: {
-      email: "dev@test.com"
-    }
-  })
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-       <h1 className="text-8xl">Hi! {user?.name}</h1>
-      <div className="flex gap-4">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center h-dvh p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-2 row-start-2 items-center sm:items-start">
+       <h1 className="text-8xl">
+        Hi! I&apos;m Carlos Santos
+       </h1>
+       <h2 className="text-2xl md:text-4xl">Software Developer</h2>
+      <div className="flex gap-4 mt-4">
        <TooltipProvider>
          <Tooltip>
            <TooltipTrigger>
@@ -49,12 +48,9 @@ export default async function Home() {
        </TooltipProvider>
       </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
+      <footer className="fixed bottom-10 md:row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <Link href="/about"
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://blog.carlosrsantos.com.br"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image
             aria-hidden
@@ -63,13 +59,11 @@ export default async function Home() {
             width={16}
             height={16}
           />
-          Docs
-        </a>
-        <a
+          About me
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/projects"
         >
           <Image
             aria-hidden
@@ -78,8 +72,9 @@ export default async function Home() {
             width={16}
             height={16}
           />
-          Visit carlosrsantos.com.br →
-        </a>
+          Visit my projects
+        </Link>
+
       </footer>
     </div>
   );
