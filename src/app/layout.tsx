@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "My dev portifolio",
   openGraph: {
     title: "Carlos Santos - @grandecadu",
-    description: "My dev portifolio",
+    description: "Hi! I'm Carlos Santos, a software developer. Check out my projects.",
     url: "https://grandecadu.vercel.app/",
     images: [
       {
-        url: "",
+        url: "https://github.com/grandecadu.png",
         width: 800,
         height: 600,
       },
