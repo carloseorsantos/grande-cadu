@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/tooltip";
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { HiHome } from "react-icons/hi2";
-import { FaLinkedin, FaInstagramSquare, FaGithubSquare } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
 export default async function Home() {
@@ -17,7 +17,7 @@ export default async function Home() {
       <main className="flex flex-col md:flex-row gap-4 md:row-start-2 items-center sm:items-start">
         <div className="h-full flex items-center justify-center">
           <Avatar className="w-[200px] h-[200px]">
-            <AvatarImage src="https://github.com/grandecadu.png" />
+            <AvatarImage src="https://github.com/carloseorsantos.png" />
             <AvatarFallback>CS</AvatarFallback>
           </Avatar>
         </div>
@@ -27,19 +27,33 @@ export default async function Home() {
               Carlos Santos
               <MdVerified className="inline text-blue-500" />
             </h1>
-            <h2 className="text-base">@grandecadu</h2>
+            <h2 className="text-base">@caducodes</h2>
           </div>
           <div>
             <p className="text-sm md:text-base max-w-[300px]">
               I&apos;m a software developer with 4+ years of experience.
             </p>
-            <p className="text-sm md:text-base max-w-[250px]">Based in 🇧🇷</p>
-            <p className="text-sm md:text-base max-w-[250px]">Visited 🇵🇾🇦🇷🇩🇪🇳🇱🇫🇷</p>
+            <p className="text-sm md:text-base max-w-[250px]">
+              FullStack Developer at
+              <Link
+                href="https://www.ciandt.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#fa5a50]"
+              >
+                &nbsp;CI&T
+              </Link>
+            </p>
+            <p className="text-sm md:text-base max-w-[250px]">Live in 🇧🇷</p>
             <div className="flex gap-4 mt-4">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Link href="https://www.linkedin.com/in/carloseorsantos/">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.linkedin.com/in/carloseorsantos/"
+                    >
                       <FaLinkedin size={32} />
                     </Link>
                   </TooltipTrigger>
@@ -47,7 +61,11 @@ export default async function Home() {
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Link href="https://github.com/grandecadu">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://github.com/carloseorsantos"
+                    >
                       <FaGithubSquare size={32} />
                     </Link>
                   </TooltipTrigger>
@@ -55,7 +73,11 @@ export default async function Home() {
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Link href="https://www.instagram.com/grandecadu">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.instagram.com/caducodes"
+                    >
                       <FaInstagramSquare size={32} />
                     </Link>
                   </TooltipTrigger>
