@@ -67,7 +67,7 @@ export default async function Home() {
           </p>
         </div>
       </main>
-      <footer className="fixed bottom-10 md:row-start-3 flex gap-6 items-center justify-center">
+      {/* <footer className="fixed bottom-10 md:row-start-3 flex gap-6 items-center justify-center">
         <Link
           href="/"
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -101,7 +101,7 @@ export default async function Home() {
           />
           Visit my projects
         </Link>
-      </footer>
+      </footer> */}
     </div>
   );
 }
