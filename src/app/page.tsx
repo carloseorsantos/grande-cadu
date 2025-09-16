@@ -1,10 +1,8 @@
-import Image from "next/image";
 import { RiNextjsFill, RiTailwindCssFill, RiReactjsFill, RiJavascriptFill, RiJavaFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
 import { BiLogoSpringBoot, BiLogoTypescript } from "react-icons/bi";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
-import Link from "next/link";
+import FooterMenu from "@/components/FooterMenu/footermenu";
 
 export default async function Home() {
   return (
@@ -69,34 +67,7 @@ export default async function Home() {
         </TooltipProvider>
         </div>
       </main>
-      <footer className="fixed bottom-10 md:row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <Link href="/about"
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          About me
-        </Link>
-        <Link
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/projects"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Visit my projects
-        </Link>
-
-      </footer>
+      <FooterMenu />
     </div>
   );
 }
